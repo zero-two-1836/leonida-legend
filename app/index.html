@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI trophy guide and tracker (PS5)</title>
+<meta name="description" content="An offline guide and progress tracker for all 55 Grand Theft Auto VI PlayStation 5 trophies: a cited guide for every trophy, a five-phase roadmap to the platinum, the one missable flagged, counters for every grind, and a spoiler shield for the story list.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <p class="brand-kicker">Grand Theft Auto VI · PlayStation 5 · 55 trophies</p>
+    <h1>Leonida <span class="brand-accent">Legend</span></h1>
+  </div>
+  <div class="top-progress" aria-label="Overall progress">
+    <div class="top-progress-text"><span id="overall-count">0 of 55 earned</span><span id="overall-pct">0%</span></div>
+    <div class="bar"><div id="overall-fill"></div></div>
+    <div class="grade-progress" id="grade-progress"></div>
+  </div>
+  <nav class="views" aria-label="Guide sections">
+    <button type="button" data-view="tracker" class="view-tab is-active">Tracker &amp; guides</button>
+    <button type="button" data-view="roadmap" class="view-tab">Roadmap</button>
+    <button type="button" data-view="missables" class="view-tab">Missables</button>
+    <button type="button" data-view="sources" class="view-tab">Sources</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ============================ TRACKER ============================ -->
+  <section id="view-tracker" class="view">
+    <div class="controls">
+      <label class="search">Search
+        <input id="search" type="search" placeholder="Name, description, guide text…" autocomplete="off">
+      </label>
+      <label>Grade
+        <select id="grade-filter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="check"><input id="spoiler-toggle" type="checkbox"> Spoiler shield</label>
+      <label class="check"><input id="hide-earned" type="checkbox"> Hide earned</label>
+      <span class="io-group">
+        <button id="export-btn" type="button">Export</button>
+        <label class="import-btn">Import <input id="import-file" type="file" accept="application/json,.json"></label>
+        <button id="reset-btn" type="button">Reset</button>
+      </span>
+    </div>
+    <div class="chips" id="kind-chips" role="group" aria-label="Filter by kind"></div>
+    <p class="result-count" id="result-count"></p>
+    <div class="tracker-grid">
+      <div class="trophy-list" id="trophy-list"></div>
+      <aside class="detail" id="detail" aria-label="Trophy guide"></aside>
+    </div>
+    <p class="empty" id="empty" hidden>No trophy matches those filters. Loosen the search or pick another kind.</p>
+  </section>
+
+  <!-- ============================ ROADMAP ============================ -->
+  <section id="view-roadmap" class="view" hidden>
+    <h2 class="view-title">Roadmap to the platinum</h2>
+    <p class="view-lede">Five phases, in the order that wastes the least travel. The phases are built from the official trophy descriptions — which chapters and missions, which collectibles and counts — and from the published roadmap estimates cited on the Sources tab.</p>
+    <div class="stat-cards" id="stat-cards"></div>
+    <div class="missable-alert" id="roadmap-missable"></div>
+    <ol class="phases" id="phases"></ol>
+    <div class="advice-grid">
+      <article class="advice">
+        <h3>Save like you mean it</h3>
+        <p>There is no mission replay. The game gives you 15 manual save slots and one autosave: keep a save at the start and end of every chapter, keep one from before the final mission until the meditation counter reads 18, and rotate the rest in free roam.</p>
+      </article>
+      <article class="advice">
+        <h3>Cheats are off the table</h3>
+        <p>Cheats disable trophies — and saving. Keep them off the save you are running for the platinum, entirely. A cheat session is a separate save or it is a ruined one.</p>
+      </article>
+      <article class="advice">
+        <h3>Two habits pay for everything</h3>
+        <p>Scan every new vehicle with the WAiNK app and study every new animal through the binoculars, from the first hour. Those two habits quietly finish four trophies and the hardest quotas of the 100% checklist.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================ MISSABLES ============================ -->
+  <section id="view-missables" class="view" hidden>
+    <h2 class="view-title">Missables — one real risk, several false alarms</h2>
+    <p class="view-lede">This list has exactly one trophy that can be missed, and it is missable because of a single moment in Chapter 1. Everything else that looks time-limited is documented below so you do not waste a restart on it.</p>
+    <div id="missable-feature"></div>
+    <h3 class="sub-title">Looks missable — is not</h3>
+    <ul class="false-alarms">
+      <li><strong>Strand givers who vanish.</strong> Kenton goes quiet after Chapter 1 and others pause mid-chain. Every trophy strand giver returns and stays after the story; a silent marker is a gate, not a loss.</li>
+      <li><strong>The bowling operation.</strong> The Kingpin Bowling robbery behind Let's Go Bowling can be attempted again if it goes wrong — the operation comes back.</li>
+      <li><strong>Timed and expiring quests.</strong> Optional missions with an hourglass can fail or expire, but none of them is tied to a trophy, and the game offers far more optional missions than the 100% checklist's 100.</li>
+      <li><strong>Finishing the story.</strong> Free roam continues after the credits and everything the 100% checklist needs stays reachable. The ending locks away nothing but the Chapter 1 meditation.</li>
+      <li><strong>The Irredeemable profile.</strong> Reaching it is permanent and makes police more aggressive — it makes cleanup harder, never impossible, and blocks no trophy.</li>
+    </ul>
+  </section>
+
+  <!-- ============================ SOURCES ============================ -->
+  <section id="view-sources" class="view" hidden>
+    <h2 class="view-title">Sources and method</h2>
+    <p class="view-lede" id="about-text"></p>
+    <ul class="bibliography" id="bibliography"></ul>
+    <h3 class="sub-title">How to read the citations</h3>
+    <p class="note">Every trophy's guide names its sources at the foot of its entry in the tracker. Names, descriptions, grades and tracked counts are PlayStation's, exactly as published; the words of each guide are this app's own. Where the published guides disagree — the size of the card-set quota for 100%, whether the Chapter 1 meditation counts — the entry says so rather than picking a side silently. Two trophies (Bad Luck, I Guess and The Truth Is Out There) had no confirmed method in any cited guide when this was written; their entries say that plainly and give the best current theory, marked as one.</p>
+    <p class="note colophon">Leonida Legend is a fan-made, offline tool. It loads nothing from the network, shows no Rockstar logo or official artwork, and stores your progress only in this browser (localStorage), exportable to a file at any time from the tracker.</p>
+  </section>
+</main>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
