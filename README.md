@@ -1,3 +1,7 @@
+[![make.fun](https://make.fun/badge/gta6-trophy-guide-01.svg)](https://make.fun/bounty/gta6-trophy-guide-01)
+[![rank](https://make.fun/badge/gta6-trophy-guide-01/zero-two-1836/leonida-legend/rank.svg)](https://make.fun/bounty/gta6-trophy-guide-01)
+[![reward](https://make.fun/badge/gta6-trophy-guide-01/zero-two-1836/leonida-legend/reward.svg)](https://make.fun/bounty/gta6-trophy-guide-01)
+
 # Leonida Legend — the GTA VI platinum tracker & guide
 
 A complete, offline trophy guide for Grand Theft Auto VI on PlayStation 5:
